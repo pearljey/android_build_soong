@@ -36,7 +36,7 @@ var (
 			"-mbranch-protection=standard",
 		},
 		"armv8-2a": []string{
-			"-march=armv8.2-a",
+			"-march=armv8.2-a+nodotprod+crypto",
 		},
 		"armv8-2a-dotprod": []string{
 			"-march=armv8.2-a+lse+fp16+dotprod",
@@ -79,7 +79,7 @@ var (
 		"kryo385": []string{
 			// Use cortex-a75 because kryo385 is not supported in GCC/clang.
 			// kryo385 does not support dot product feature.
-			"-mcpu=cortex-a75+nodotprod",
+			"-mcpu=cortex-a75+nodotprod+crypto",
 		},
 		"exynos-m1": []string{
 			"-mcpu=exynos-m1",

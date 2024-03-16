@@ -76,7 +76,7 @@ var (
 			"-mfpu=neon-fp-armv8",
 		},
 		"armv8-2a": []string{
-			"-march=armv8.2-a",
+			"-march=armv8.2-a+nodotprod+crypto",
 			"-mfloat-abi=softfp",
 			"-mfpu=neon-fp-armv8",
 		},
@@ -123,7 +123,7 @@ var (
 			"-D__ARM_FEATURE_LPAE=1",
 		},
 		"cortex-a55": []string{
-			"-mcpu=cortex-a55",
+			"-mcpu=cortex-a55+nodotprod+crypto",
 			"-mfpu=neon-fp-armv8",
 			// Fake an ARM compiler flag as these processors support LPAE which clang
 			// don't advertise.
